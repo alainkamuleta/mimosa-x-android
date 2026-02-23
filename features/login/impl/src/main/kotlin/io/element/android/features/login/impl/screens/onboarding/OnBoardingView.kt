@@ -120,7 +120,7 @@ private fun AddFirstAccountScaffold(
 ) {
     OnBoardingPage(
         modifier = modifier,
-        renderBackground = state.onBoardingLogoResId == null,
+        renderBackground = false,
         content = {
             if (state.onBoardingLogoResId != null) {
                 OnBoardingLogo(
@@ -166,10 +166,20 @@ private fun OnBoardingContent(state: OnBoardingState) {
                 verticalBias = -0.4f
             )
         ) {
-            ElementLogoAtom(
-                size = ElementLogoAtomSize.Large,
-                modifier = Modifier.padding(top = ElementLogoAtomSize.Large.shadowRadius / 2)
-            )
+            val context = androidx.compose.ui.platform.LocalContext.current
+            val iconId = context.resources.getIdentifier("ic_launcher", "mipmap", context.packageName)
+            if (iconId != 0) {
+                androidx.compose.foundation.Image(
+                    painter = androidx.compose.ui.res.painterResource(id = iconId),
+                    contentDescription = null,
+                    modifier = Modifier.padding(top = 32.dp).androidx.compose.foundation.layout.size(120.dp)
+                )
+            } else {
+                ElementLogoAtom(
+                    size = ElementLogoAtomSize.Large,
+                    modifier = Modifier.padding(top = ElementLogoAtomSize.Large.shadowRadius / 2)
+                )
+            }
         }
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -260,7 +270,7 @@ private fun OnBoardingButtons(
             )
         } else {
             Button(
-                text = "Se connecter avec Authentik",
+                text = "Se connecter avec Convergence",
                 showProgress = isLoading,
                 onClick = {
                     state.eventSink(OnBoardingEvents.OnSignIn(defaultAccountProvider))
@@ -296,7 +306,7 @@ private fun OnBoardingButtons(
                             state.eventSink(OnBoardingEvents.OnVersionClick)
                         }
                         .padding(16.dp),
-                    text = stringResource(id = R.string.screen_onboarding_app_version, state.version),
+                    text = "Version 25.12.1a",
                     style = ElementTheme.typography.fontBodySmRegular,
                     color = ElementTheme.colors.textSecondary,
                 )

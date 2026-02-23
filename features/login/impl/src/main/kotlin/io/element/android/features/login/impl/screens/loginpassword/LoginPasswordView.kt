@@ -123,15 +123,29 @@ fun LoginPasswordView(
                 .padding(start = 20.dp, end = 20.dp, bottom = 20.dp),
         ) {
             // Title
-            IconTitleSubtitleMolecule(
-                modifier = Modifier.padding(top = 20.dp, start = 16.dp, end = 16.dp),
-                iconStyle = BigIcon.Style.Default(CompoundIcons.UserProfileSolid()),
-                title = stringResource(
-                    id = R.string.screen_account_provider_signin_title,
-                    state.accountProvider.title
-                ),
-                subTitle = stringResource(id = R.string.screen_login_subtitle)
-            )
+            Column(
+                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth().padding(top = 20.dp, start = 16.dp, end = 16.dp)
+            ) {
+                androidx.compose.foundation.Image(
+                    painter = androidx.compose.ui.res.painterResource(id = R.drawable.authentik_g_logo_2),
+                    contentDescription = null,
+                    modifier = Modifier.padding(bottom = 16.dp).androidx.compose.foundation.layout.size(72.dp)
+                )
+                io.element.android.libraries.designsystem.theme.components.Text(
+                    text = "Vous êtes sur le point de vous connecter à Mimosa",
+                    style = ElementTheme.typography.fontHeadingLgBold,
+                    color = ElementTheme.colors.textPrimary,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+                io.element.android.libraries.designsystem.theme.components.Text(
+                    text = "Mimosa est une plateforme de communication protégée et décentralisée.",
+                    style = ElementTheme.typography.fontBodyLgRegular,
+                    color = ElementTheme.colors.textSecondary,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                )
+            }
             Spacer(Modifier.height(40.dp))
             LoginForm(
                 state = state,
