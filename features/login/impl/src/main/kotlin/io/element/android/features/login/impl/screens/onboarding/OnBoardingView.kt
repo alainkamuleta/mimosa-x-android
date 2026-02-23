@@ -168,7 +168,7 @@ private fun OnBoardingContent(state: OnBoardingState) {
             )
         ) {
             androidx.compose.foundation.Image(
-                painter = androidx.compose.ui.res.painterResource(id = R.drawable.logo_convergence_cloud),
+                painter = androidx.compose.ui.res.painterResource(id = R.drawable.logo_convergence_mimosa),
                 contentDescription = null,
                 modifier = Modifier.padding(top = 32.dp).size(120.dp)
             )
@@ -193,7 +193,7 @@ private fun OnBoardingContent(state: OnBoardingState) {
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Discutez sans limites au travers d'une infrastructure Zero-Touch hautement cryptée et protégée.",
+                    text = "Discutez sans limites au travers d'une infrastructure cryptée et protégée.",
                     color = ElementTheme.colors.textSecondary,
                     style = ElementTheme.typography.fontBodyLgRegular.copy(fontSize = 17.sp),
                     textAlign = TextAlign.Center
