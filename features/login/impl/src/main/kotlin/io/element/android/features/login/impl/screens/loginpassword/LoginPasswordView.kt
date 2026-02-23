@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -130,7 +131,7 @@ fun LoginPasswordView(
                 androidx.compose.foundation.Image(
                     painter = androidx.compose.ui.res.painterResource(id = R.drawable.authentik_g_logo_2),
                     contentDescription = null,
-                    modifier = Modifier.padding(bottom = 16.dp).androidx.compose.foundation.layout.size(72.dp)
+                    modifier = Modifier.padding(bottom = 16.dp).size(72.dp)
                 )
                 io.element.android.libraries.designsystem.theme.components.Text(
                     text = "Vous êtes sur le point de vous connecter à Mimosa",

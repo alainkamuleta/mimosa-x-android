@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -172,7 +173,7 @@ private fun OnBoardingContent(state: OnBoardingState) {
                 androidx.compose.foundation.Image(
                     painter = androidx.compose.ui.res.painterResource(id = iconId),
                     contentDescription = null,
-                    modifier = Modifier.padding(top = 32.dp).androidx.compose.foundation.layout.size(120.dp)
+                    modifier = Modifier.padding(top = 32.dp).size(120.dp)
                 )
             } else {
                 ElementLogoAtom(
