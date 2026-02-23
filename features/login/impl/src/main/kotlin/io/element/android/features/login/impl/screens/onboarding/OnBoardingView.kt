@@ -167,20 +167,11 @@ private fun OnBoardingContent(state: OnBoardingState) {
                 verticalBias = -0.4f
             )
         ) {
-            val context = androidx.compose.ui.platform.LocalContext.current
-            val iconId = context.resources.getIdentifier("ic_launcher", "mipmap", context.packageName)
-            if (iconId != 0) {
-                androidx.compose.foundation.Image(
-                    painter = androidx.compose.ui.res.painterResource(id = iconId),
-                    contentDescription = null,
-                    modifier = Modifier.padding(top = 32.dp).size(120.dp)
-                )
-            } else {
-                ElementLogoAtom(
-                    size = ElementLogoAtomSize.Large,
-                    modifier = Modifier.padding(top = ElementLogoAtomSize.Large.shadowRadius / 2)
-                )
-            }
+            androidx.compose.foundation.Image(
+                painter = androidx.compose.ui.res.painterResource(id = R.drawable.logo_convergence_cloud),
+                contentDescription = null,
+                modifier = Modifier.padding(top = 32.dp).size(120.dp)
+            )
         }
         Box(
             modifier = Modifier.fillMaxSize(),
