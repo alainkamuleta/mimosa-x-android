@@ -20,8 +20,8 @@ object BuildTimeConfig {
     val URL_LOGO: String? = null
     val URL_COPYRIGHT: String? = null
     val URL_ACCEPTABLE_USE: String? = null
-    val URL_PRIVACY: String? = null
-    val URL_POLICY: String? = null
+    val URL_PRIVACY: String? = "https://ztn0.net/privacy"
+    val URL_POLICY: String? = "https://ztn0.net/terms"
     val SERVICES_MAPTILER_BASE_URL: String? = null
     val SERVICES_MAPTILER_APIKEY: String? = null
     val SERVICES_MAPTILER_LIGHT_MAPID: String? = null
@@ -30,9 +30,9 @@ object BuildTimeConfig {
     val SERVICES_POSTHOG_APIKEY: String? = null
     val SERVICES_SENTRY_DSN: String? = null
     val SERVICES_SENTRY_DSN_RUST: String? = null
-    val BUG_REPORT_URL: String? = null
+    val BUG_REPORT_URL: String? = "https://ztn0.net/support"
     val BUG_REPORT_APP_NAME: String? = "Mimosa"
 
-    const val PUSH_CONFIG_INCLUDE_FIREBASE = false
+    const val PUSH_CONFIG_INCLUDE_FIREBASE = true
     const val PUSH_CONFIG_INCLUDE_UNIFIED_PUSH = true
 }
