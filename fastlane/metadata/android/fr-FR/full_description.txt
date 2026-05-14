@@ -1,0 +1,27 @@
+Mimosa-X : Votre Passerelle de Communication Souveraine
+
+Découvrez la nouvelle génération de communication sécurisée, décentralisée et souveraine. Basée sur le standard ouvert Matrix, Mimosa-X est conçue spécifiquement pour l'écosystème Convergence, offrant un contrôle absolu sur vos données et vos interactions.
+
+<b>Souveraineté Absolue</b>
+Mimosa-X permet aux organisations et aux individus de s'approprier leurs données. En s'appuyant sur des serveurs Matrix privés (HomeServers) et une découverte souveraine dynamique, vous garantissez que vos communications restent au sein de votre infrastructure, à l'abri des regards indiscrets des géants du numérique.
+
+<b>Sécurité et Confidentialité Avancées</b>
+• Chiffrement de bout en bout : Chaque message, appel et transfert de fichier est protégé par des protocoles cryptographiques de pointe.
+• Protection Biométrique : Sécurisez vos conversations grâce à l'authentification biométrique matérielle.
+• Architecture Zero-Knowledge : Nous n'exploitons pas vos données. Vous détenez les clés de votre coffre-fort souverain.
+
+<b>Intégration à l'Écosystème Convergence</b>
+• Notifications Push FCM : Recevez les alertes et messages critiques de votre agence en temps réel.
+• Échange de Médias Sécurisé : Transférez des images, vidéos et fichiers audio via un stockage privé sécurisé.
+• Découverte Souveraine : Connectez-vous en toute transparence à l'infrastructure de votre organisation grâce à la résolution par domaine.
+
+<b>Fonctionnalités Riches</b>
+• Appels voix et vidéo d'une clarté cristalline.
+• Gestion dynamique des groupes et ciblage par entité.
+• Synchronisation multi-appareils avec une interface moderne, épurée et performante.
+
+Rejoignez le mouvement souverain. Communiquez sans compromis.
+
+L'application nécessite la permission android.permission.REQUEST_INSTALL_PACKAGES pour permettre l'installation de modules et de mises à jour sécurisés de l'agence, garantissant un accès transparent à la suite logicielle souveraine.
+
+L'application nécessite la permission USE_FULL_SCREEN_INTENT pour garantir que les notifications d'appels critiques sont délivrées même lorsque l'appareil est verrouillé.
