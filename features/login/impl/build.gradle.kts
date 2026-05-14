@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.androidx.browser)
     implementation(libs.androidx.webkit)
     implementation(libs.serialization.json)
+    implementation(projects.libraries.network)
+    implementation(libs.network.retrofit)
+    implementation(libs.network.retrofit.converter.serialization)
     api(projects.features.login.api)
 
     testCommonDependencies(libs, true)

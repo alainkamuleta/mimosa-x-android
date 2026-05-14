@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "855340122836",
+    "project_id": "mimosa-8d796",
+    "storage_bucket": "mimosa-8d796.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855340122836:android:e96b80692f069e3ec37141",
+        "android_client_info": {
+          "package_name": "net.ztn0.mimosa.x"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiDgOzl1FbtN5vhlafA_VFJbly82fpTQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

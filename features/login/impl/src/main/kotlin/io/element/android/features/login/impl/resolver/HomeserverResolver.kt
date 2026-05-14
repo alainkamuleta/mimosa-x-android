@@ -41,26 +41,18 @@ class HomeserverResolver(
             if (parts.size == 2) {
                 val username = parts[0]
                 val domain = parts[1]
-                val resolvedUrl = discoveryService.resolveHomeServer(username, domain)
-                if (resolvedUrl != null) {
-                    emit(listOf(HomeserverData(
-                        homeserverUrl = resolvedUrl,
-                        homeserverDomain = domain,
-                        isSovereign = true
-                    )))
+                val resolved = discoveryService.resolve(username, domain)
+                if (resolved != null) {
+                    emit(listOf(resolved))
                     return@flow
                 }
             }
         }
 
         // 2. Check if it's a known domain directly
-        val resolvedUrlForDomain = discoveryService.resolveHomeServer(null, trimmedUserInput)
-        if (resolvedUrlForDomain != null) {
-            emit(listOf(HomeserverData(
-                homeserverUrl = resolvedUrlForDomain,
-                homeserverDomain = trimmedUserInput,
-                isSovereign = true
-            )))
+        val resolved = discoveryService.resolve(null, trimmedUserInput)
+        if (resolved != null) {
+            emit(listOf(resolved))
             return@flow
         }
 
