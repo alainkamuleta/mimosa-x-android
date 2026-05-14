@@ -101,6 +101,12 @@ android {
             storePassword = System.getenv("ELEMENT_ANDROID_NIGHTLY_STOREPASSWORD")
                 ?: project.property("signing.element.nightly.storePassword") as? String?
         }
+        register("release") {
+            keyAlias = "mimosa"
+            keyPassword = "Mimosa2026!"
+            storeFile = file("./signature/mimosa-production.jks")
+            storePassword = "Mimosa2026!"
+        }
     }
 
     val baseAppName = BuildTimeConfig.APPLICATION_NAME
@@ -127,7 +133,7 @@ android {
                 "login_redirect_scheme",
                 oidcRedirectSchemeBase,
             )
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
 
             optimization {
                 enable = true

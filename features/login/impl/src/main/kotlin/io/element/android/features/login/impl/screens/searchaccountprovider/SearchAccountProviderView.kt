@@ -142,6 +142,33 @@ fun SearchAccountProviderView(
                     )
                 }
 
+                if (state.userInput.isEmpty()) {
+                    when (state.suggestedDomains) {
+                        is AsyncData.Success -> {
+                            if (state.suggestedDomains.data.isNotEmpty()) {
+                                item {
+                                    androidx.compose.material3.Text(
+                                        text = "Suggestions Convergence",
+                                        style = androidx.compose.material3.MaterialTheme.typography.titleSmall,
+                                        modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 8.dp),
+                                        color = androidx.compose.material3.MaterialTheme.colorScheme.primary
+                                    )
+                                }
+                                items(state.suggestedDomains.data) { homeserverData ->
+                                    val item = homeserverData.toAccountProvider()
+                                    AccountProviderView(
+                                        item = item,
+                                        onClick = {
+                                            eventSink(SearchAccountProviderEvents.UserInput(homeserverData.homeserverDomain ?: ""))
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                        else -> Unit
+                    }
+                }
+
                 when (state.userInputResult) {
                     is AsyncData.Failure -> {
                         // Ignore errors (let the user type more chars)
@@ -150,7 +177,8 @@ fun SearchAccountProviderView(
                         item {
                             Box(
                                 modifier = Modifier
-                                    .fillMaxSize()
+                                    .fillMaxWidth()
+                                    .padding(vertical = 16.dp)
                             ) {
                                 CircularProgressIndicator(
                                     modifier = Modifier.align(Alignment.Center)
@@ -171,6 +199,7 @@ fun SearchAccountProviderView(
                     }
                     AsyncData.Uninitialized -> Unit
                 }
+
                 item {
                     Spacer(Modifier.height(32.dp))
                 }
@@ -187,10 +216,16 @@ fun SearchAccountProviderView(
 @Composable
 private fun HomeserverData.toAccountProvider(): AccountProvider {
     val isMatrixOrg = homeserverUrl == AuthenticationConfig.MATRIX_ORG_URL
+    val displayTitle = homeserverDomain ?: homeserverUrl.removePrefix("https://").removePrefix("http://")
+    val displaySubtitle = when {
+        isMatrixOrg -> stringResource(id = R.string.screen_change_account_provider_matrix_org_subtitle)
+        isSovereign -> "Souverain Convergence ${icon ?: ""}"
+        else -> null
+    }
     return AccountProvider(
         url = homeserverUrl,
-        subtitle = if (isMatrixOrg) stringResource(id = R.string.screen_change_account_provider_matrix_org_subtitle) else null,
-        // There is no need to know for other servers right now
+        title = displayTitle,
+        subtitle = displaySubtitle,
         isPublic = isMatrixOrg,
         isMatrixOrg = isMatrixOrg,
     )

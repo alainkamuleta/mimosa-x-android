@@ -30,6 +30,7 @@ import kotlinx.coroutines.launch
 class SearchAccountProviderPresenter(
     private val homeserverResolver: HomeserverResolver,
     private val changeServerPresenter: Presenter<ChangeServerState>,
+    private val discoveryService: ConvergenceDiscoveryService,
 ) : Presenter<SearchAccountProviderState> {
     @Composable
     override fun present(): SearchAccountProviderState {
@@ -40,6 +41,23 @@ class SearchAccountProviderPresenter(
 
         val data: MutableState<AsyncData<List<HomeserverData>>> = remember {
             mutableStateOf(AsyncData.Uninitialized)
+        }
+
+        val suggestedDomains: MutableState<AsyncData<List<HomeserverData>>> = remember {
+            mutableStateOf(AsyncData.Uninitialized)
+        }
+
+        LaunchedEffect(Unit) {
+            suggestedDomains.value = AsyncData.Loading()
+            val domains = discoveryService.getDomains().map {
+                HomeserverData(
+                    homeserverUrl = "", // Domain selection doesn't have a URL yet, or we can resolve it
+                    homeserverDomain = it.id,
+                    isSovereign = true,
+                    icon = it.icon
+                )
+            }
+            suggestedDomains.value = AsyncData.Success(domains)
         }
 
         LaunchedEffect(userInput) {
@@ -57,6 +75,7 @@ class SearchAccountProviderPresenter(
         return SearchAccountProviderState(
             userInput = userInput,
             userInputResult = data.value,
+            suggestedDomains = suggestedDomains.value,
             changeServerState = changeServerState,
             eventSink = ::handleEvent,
         )

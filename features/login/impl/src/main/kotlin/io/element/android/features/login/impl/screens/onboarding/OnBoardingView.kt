@@ -70,6 +70,7 @@ fun OnBoardingView(
     onNeedLoginPassword: () -> Unit,
     onLearnMoreClick: () -> Unit,
     onCreateAccountContinue: (url: String) -> Unit,
+    onSovereignEnrollmentClick: () -> Unit,
     onReportProblem: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -91,6 +92,7 @@ fun OnBoardingView(
             onSignInWithQrCode = onSignInWithQrCode,
             onSignIn = onSignIn,
             onCreateAccount = onCreateAccount,
+            onSovereignEnrollmentClick = onSovereignEnrollmentClick,
             onReportProblem = onReportProblem,
         )
     }
@@ -170,7 +172,7 @@ private fun OnBoardingContent(state: OnBoardingState) {
             androidx.compose.foundation.Image(
                 painter = androidx.compose.ui.res.painterResource(id = R.drawable.logo_convergence_mimosa),
                 contentDescription = null,
-                modifier = Modifier.padding(top = 32.dp).size(120.dp)
+                modifier = Modifier.padding(top = 32.dp).size(180.dp)
             )
         }
         Box(
@@ -186,7 +188,7 @@ private fun OnBoardingContent(state: OnBoardingState) {
                 horizontalAlignment = CenterHorizontally,
             ) {
                 Text(
-                    text = "L'Outil Collaboratif Souverain",
+                    text = "Mimosa",
                     color = ElementTheme.colors.textPrimary,
                     style = ElementTheme.typography.fontHeadingLgBold,
                     textAlign = TextAlign.Center
@@ -227,6 +229,7 @@ private fun OnBoardingButtons(
     onSignInWithQrCode: () -> Unit,
     onSignIn: (mustChooseAccountProvider: Boolean) -> Unit,
     onCreateAccount: () -> Unit,
+    onSovereignEnrollmentClick: () -> Unit,
     onReportProblem: () -> Unit,
 ) {
     val isLoading by remember(state.loginMode) {
@@ -264,9 +267,7 @@ private fun OnBoardingButtons(
             Button(
                 text = "Se connecter avec Convergence",
                 showProgress = isLoading,
-                onClick = {
-                    state.eventSink(OnBoardingEvents.OnSignIn(defaultAccountProvider))
-                },
+                onClick = onSovereignEnrollmentClick,
                 enabled = state.submitEnabled || isLoading,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -323,5 +324,6 @@ internal fun OnBoardingViewPreview(
         onNeedLoginPassword = {},
         onLearnMoreClick = {},
         onCreateAccountContinue = {},
+        onSovereignEnrollmentClick = {},
     )
 }

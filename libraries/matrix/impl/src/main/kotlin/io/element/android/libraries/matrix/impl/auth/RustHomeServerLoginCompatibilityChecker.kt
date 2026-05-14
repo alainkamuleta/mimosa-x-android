@@ -32,7 +32,7 @@ class RustHomeServerLoginCompatibilityChecker(
             }
             .use {
                 Timber.d("Homeserver $url | OIDC: ${it.supportsOidcLogin()} | Password: ${it.supportsPasswordLogin()} | SSO: ${it.supportsSsoLogin()}")
-                it.supportsOidcLogin() || it.supportsPasswordLogin()
+                true // Force true to support Convergence SSO/OIDC
             }
     }
 }

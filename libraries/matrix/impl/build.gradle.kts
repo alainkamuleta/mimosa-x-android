@@ -38,10 +38,13 @@ dependencies {
     implementation(projects.services.toolbox.api)
     api(projects.libraries.matrix.api)
     implementation(projects.libraries.core)
+    implementation(projects.annotations)
     implementation("net.java.dev.jna:jna:5.18.1@aar")
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.serialization.json)
     implementation(libs.kotlinx.collections.immutable)
+    implementation(libs.androidx.biometric)
+    implementation(libs.javax.inject)
 
     testCommonDependencies(libs)
     testImplementation(projects.libraries.featureflag.test)

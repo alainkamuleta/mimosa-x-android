@@ -28,11 +28,43 @@ import java.util.Collections
 class HomeserverResolver(
     private val dispatchers: CoroutineDispatchers,
     private val homeServerLoginCompatibilityChecker: HomeServerLoginCompatibilityChecker,
+    private val discoveryService: ConvergenceDiscoveryService,
 ) {
     fun resolve(userInput: String): Flow<List<HomeserverData>> = flow {
         val flowContext = currentCoroutineContext()
         val trimmedUserInput = userInput.trim()
-        if (trimmedUserInput.length < 4) return@flow
+        if (trimmedUserInput.length < 3) return@flow
+
+        // 1. Check if it's a Matrix ID format (@user:domain)
+        if (trimmedUserInput.startsWith("@") && trimmedUserInput.contains(":")) {
+            val parts = trimmedUserInput.substring(1).split(":")
+            if (parts.size == 2) {
+                val username = parts[0]
+                val domain = parts[1]
+                val resolvedUrl = discoveryService.resolveHomeServer(username, domain)
+                if (resolvedUrl != null) {
+                    emit(listOf(HomeserverData(
+                        homeserverUrl = resolvedUrl,
+                        homeserverDomain = domain,
+                        isSovereign = true
+                    )))
+                    return@flow
+                }
+            }
+        }
+
+        // 2. Check if it's a known domain directly
+        val resolvedUrlForDomain = discoveryService.resolveHomeServer(null, trimmedUserInput)
+        if (resolvedUrlForDomain != null) {
+            emit(listOf(HomeserverData(
+                homeserverUrl = resolvedUrlForDomain,
+                homeserverDomain = trimmedUserInput,
+                isSovereign = true
+            )))
+            return@flow
+        }
+
+        // 3. Legacy resolution / URL candidates
         val candidateBase = trimmedUserInput.ensureProtocol().removeSuffix("/")
         val list = getUrlCandidates(candidateBase)
         val currentList = Collections.synchronizedList(mutableListOf<HomeserverData>())
@@ -59,6 +91,7 @@ class HomeserverResolver(
             emit(listOf(HomeserverData(homeserverUrl = candidateBase)))
         }
     }
+
 
     private fun getUrlCandidates(data: String): List<String> {
         return buildList {

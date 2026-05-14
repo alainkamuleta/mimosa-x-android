@@ -111,6 +111,10 @@ class OnBoardingPresenter(
                     )
                 }
                 OnBoardingEvents.ClearError -> loginHelper.clearError()
+                OnBoardingEvents.OnSovereignEnrollmentClick -> {
+                    // This event is usually handled by the View via callback, 
+                    // but we add it here to make 'when' exhaustive.
+                }
                 OnBoardingEvents.OnVersionClick -> {
                     if (canReportBug) {
                         if (multipleTapToUnlock.unlock(localCoroutineScope)) {

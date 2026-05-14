@@ -15,4 +15,5 @@ sealed interface OnBoardingEvents {
 
     data object OnVersionClick : OnBoardingEvents
     data object ClearError : OnBoardingEvents
+    data object OnSovereignEnrollmentClick : OnBoardingEvents
 }

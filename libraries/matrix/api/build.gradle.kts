@@ -1,6 +1,7 @@
 import config.BuildTimeConfig
 import extension.buildConfigFieldStr
 import extension.testCommonDependencies
+import extension.setupDependencyInjection
 
 /*
  * Copyright (c) 2025 Element Creations Ltd.
@@ -52,7 +53,11 @@ dependencies {
     api(projects.libraries.sessionStorage.api)
     implementation(libs.coroutines.core)
     api(projects.libraries.architecture)
+    implementation(libs.androidx.biometric)
+    implementation(libs.javax.inject)
 
     testCommonDependencies(libs)
     testImplementation(projects.libraries.matrix.test)
 }
+
+

@@ -15,6 +15,7 @@ import io.element.android.libraries.architecture.AsyncData
 data class SearchAccountProviderState(
     val userInput: String,
     val userInputResult: AsyncData<List<HomeserverData>>,
+    val suggestedDomains: AsyncData<List<HomeserverData>>,
     val changeServerState: ChangeServerState,
     val eventSink: (SearchAccountProviderEvents) -> Unit
 )
