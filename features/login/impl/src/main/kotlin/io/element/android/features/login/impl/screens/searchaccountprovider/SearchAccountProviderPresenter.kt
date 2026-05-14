@@ -18,6 +18,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import dev.zacsweers.metro.Inject
 import io.element.android.features.login.impl.changeserver.ChangeServerState
+import io.element.android.features.login.impl.resolver.ConvergenceDiscoveryService
 import io.element.android.features.login.impl.resolver.HomeserverData
 import io.element.android.features.login.impl.resolver.HomeserverResolver
 import io.element.android.libraries.architecture.AsyncData

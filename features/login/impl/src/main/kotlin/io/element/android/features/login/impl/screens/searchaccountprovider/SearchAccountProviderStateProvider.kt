@@ -26,9 +26,11 @@ open class SearchAccountProviderStateProvider : PreviewParameterProvider<SearchA
 fun aSearchAccountProviderState(
     userInput: String = "",
     userInputResult: AsyncData<List<HomeserverData>> = AsyncData.Uninitialized,
+    suggestedDomains: AsyncData<List<HomeserverData>> = AsyncData.Uninitialized,
 ) = SearchAccountProviderState(
     userInput = userInput,
     userInputResult = userInputResult,
+    suggestedDomains = suggestedDomains,
     changeServerState = aChangeServerState(),
     eventSink = {}
 )
