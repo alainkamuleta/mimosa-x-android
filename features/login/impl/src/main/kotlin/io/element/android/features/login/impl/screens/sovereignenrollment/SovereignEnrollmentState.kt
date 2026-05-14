@@ -10,7 +10,10 @@ data class SovereignEnrollmentState(
 )
 
 sealed interface EnrollmentStep {
+    data object MethodSelection : EnrollmentStep
     data object Scanning : EnrollmentStep
+    data object EmailInput : EnrollmentStep
+    data object IdInput : EnrollmentStep
     data object Confirming : EnrollmentStep
     data object Securing : EnrollmentStep
     data object Loading : EnrollmentStep

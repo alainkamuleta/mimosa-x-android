@@ -1,7 +1,6 @@
 import config.BuildTimeConfig
 import extension.buildConfigFieldStr
 import extension.testCommonDependencies
-import extension.setupDependencyInjection
 
 /*
  * Copyright (c) 2025 Element Creations Ltd.

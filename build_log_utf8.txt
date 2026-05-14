@@ -1,0 +1,691 @@
+﻿Parallel Configuration Cache is an incubating feature.
+Configuration on demand is an incubating feature.
+Included project: :features:analytics:api
+Included project: :features:analytics:impl
+Included project: :features:announcement:api
+Included project: :features:announcement:impl
+Included project: :features:announcement:test
+Included project: :features:cachecleaner:api
+Included project: :features:cachecleaner:impl
+Included project: :features:call:api
+Included project: :features:call:impl
+Included project: :features:call:test
+Included project: :features:createroom:api
+Included project: :features:createroom:impl
+Included project: :features:createroom:test
+Included project: :features:deactivation:api
+Included project: :features:deactivation:impl
+Included project: :features:deactivation:test
+Included project: :features:enterprise:api
+Included project: :features:enterprise:impl-foss
+Included project: :features:enterprise:test
+Included project: :features:forward:api
+Included project: :features:forward:impl
+Included project: :features:forward:test
+Included project: :features:ftue:api
+Included project: :features:ftue:impl
+Included project: :features:ftue:test
+Included project: :features:home:api
+Included project: :features:home:impl
+Included project: :features:invite:api
+Included project: :features:invite:impl
+Included project: :features:invite:test
+Included project: :features:invitepeople:api
+Included project: :features:invitepeople:impl
+Included project: :features:joinroom:api
+Included project: :features:joinroom:impl
+Included project: :features:knockrequests:api
+Included project: :features:knockrequests:impl
+Included project: :features:knockrequests:test
+Included project: :features:leaveroom:api
+Included project: :features:leaveroom:impl
+Included project: :features:licenses:api
+Included project: :features:licenses:impl
+Included project: :features:licenses:test
+Included project: :features:location:api
+Included project: :features:location:impl
+Included project: :features:location:test
+Included project: :features:lockscreen:api
+Included project: :features:lockscreen:impl
+Included project: :features:lockscreen:test
+Included project: :features:login:api
+Included project: :features:login:impl
+Included project: :features:login:test
+Included project: :features:logout:api
+Included project: :features:logout:impl
+Included project: :features:logout:test
+Included project: :features:messages:api
+Included project: :features:messages:impl
+Included project: :features:messages:test
+Included project: :features:migration:api
+Included project: :features:migration:impl
+Included project: :features:networkmonitor:api
+Included project: :features:networkmonitor:impl
+Included project: :features:networkmonitor:test
+Included project: :features:poll:api
+Included project: :features:poll:impl
+Included project: :features:poll:test
+Included project: :features:preferences:api
+Included project: :features:preferences:impl
+Included project: :features:rageshake:api
+Included project: :features:rageshake:impl
+Included project: :features:rageshake:test
+Included project: :features:reportroom:api
+Included project: :features:reportroom:impl
+Included project: :features:reportroom:test
+Included project: :features:rolesandpermissions:api
+Included project: :features:rolesandpermissions:impl
+Included project: :features:rolesandpermissions:test
+Included project: :features:roomaliasresolver:api
+Included project: :features:roomaliasresolver:impl
+Included project: :features:roomcall:api
+Included project: :features:roomcall:impl
+Included project: :features:roomdetails:api
+Included project: :features:roomdetails:impl
+Included project: :features:roomdetailsedit:api
+Included project: :features:roomdetailsedit:impl
+Included project: :features:roomdetailsedit:test
+Included project: :features:roomdirectory:api
+Included project: :features:roomdirectory:impl
+Included project: :features:roommembermoderation:api
+Included project: :features:roommembermoderation:impl
+Included project: :features:securebackup:api
+Included project: :features:securebackup:impl
+Included project: :features:securityandprivacy:api
+Included project: :features:securityandprivacy:impl
+Included project: :features:securityandprivacy:test
+Included project: :features:share:api
+Included project: :features:share:impl
+Included project: :features:signedout:api
+Included project: :features:signedout:impl
+Included project: :features:space:api
+Included project: :features:space:impl
+Included project: :features:startchat:api
+Included project: :features:startchat:impl
+Included project: :features:startchat:test
+Included project: :features:userprofile:api
+Included project: :features:userprofile:impl
+Included project: :features:userprofile:shared
+Included project: :features:verifysession:api
+Included project: :features:verifysession:impl
+Included project: :features:verifysession:test
+Included project: :features:viewfolder:api
+Included project: :features:viewfolder:impl
+Included project: :features:viewfolder:test
+Included project: :libraries:accountselect:api
+Included project: :libraries:accountselect:impl
+Included project: :libraries:androidutils
+Included project: :libraries:architecture
+Included project: :libraries:audio:api
+Included project: :libraries:audio:impl
+Included project: :libraries:audio:test
+Included project: :libraries:compound
+Included project: :libraries:core
+Included project: :libraries:cryptography:api
+Included project: :libraries:cryptography:impl
+Included project: :libraries:cryptography:test
+Included project: :libraries:dateformatter:api
+Included project: :libraries:dateformatter:impl
+Included project: :libraries:dateformatter:test
+Included project: :libraries:deeplink:api
+Included project: :libraries:deeplink:impl
+Included project: :libraries:designsystem
+Included project: :libraries:di
+Included project: :libraries:encrypted-db
+Included project: :libraries:eventformatter:api
+Included project: :libraries:eventformatter:impl
+Included project: :libraries:eventformatter:test
+Included project: :libraries:featureflag:api
+Included project: :libraries:featureflag:impl
+Included project: :libraries:featureflag:test
+Included project: :libraries:featureflag:ui
+Included project: :libraries:fullscreenintent:api
+Included project: :libraries:fullscreenintent:impl
+Included project: :libraries:indicator:api
+Included project: :libraries:indicator:impl
+Included project: :libraries:indicator:test
+Included project: :libraries:maplibre-compose
+Included project: :libraries:matrix:api
+Included project: :libraries:matrix:impl
+Included project: :libraries:matrix:test
+Included project: :libraries:matrixmedia:api
+Included project: :libraries:matrixmedia:impl
+Included project: :libraries:matrixmedia:test
+Included project: :libraries:matrixui
+Included project: :libraries:mediapickers:api
+Included project: :libraries:mediapickers:impl
+Included project: :libraries:mediapickers:test
+Included project: :libraries:mediaplayer:api
+Included project: :libraries:mediaplayer:impl
+Included project: :libraries:mediaplayer:test
+Included project: :libraries:mediaupload:api
+Included project: :libraries:mediaupload:impl
+Included project: :libraries:mediaupload:test
+Included project: :libraries:mediaviewer:api
+Included project: :libraries:mediaviewer:impl
+Included project: :libraries:mediaviewer:test
+Included project: :libraries:network
+Included project: :libraries:oidc:api
+Included project: :libraries:oidc:impl
+Included project: :libraries:oidc:test
+Included project: :libraries:permissions:api
+Included project: :libraries:permissions:impl
+Included project: :libraries:permissions:noop
+Included project: :libraries:permissions:test
+Included project: :libraries:preferences:api
+Included project: :libraries:preferences:impl
+Included project: :libraries:preferences:test
+Included project: :libraries:previewutils
+Included project: :libraries:push:api
+Included project: :libraries:push:impl
+Included project: :libraries:push:test
+Included project: :libraries:pushproviders:api
+Included project: :libraries:pushproviders:firebase
+Included project: :libraries:pushproviders:test
+Included project: :libraries:pushproviders:unifiedpush
+Included project: :libraries:pushstore:api
+Included project: :libraries:pushstore:impl
+Included project: :libraries:pushstore:test
+Included project: :libraries:qrcode
+Included project: :libraries:recentemojis:api
+Included project: :libraries:recentemojis:impl
+Included project: :libraries:recentemojis:test
+Included project: :libraries:roomselect:api
+Included project: :libraries:roomselect:impl
+Included project: :libraries:roomselect:test
+Included project: :libraries:rustsdk
+Included project: :libraries:session-storage:api
+Included project: :libraries:session-storage:impl
+Included project: :libraries:session-storage:test
+Included project: :libraries:testtags
+Included project: :libraries:textcomposer:impl
+Included project: :libraries:textcomposer:lib
+Included project: :libraries:troubleshoot:api
+Included project: :libraries:troubleshoot:impl
+Included project: :libraries:troubleshoot:test
+Included project: :libraries:ui-common
+Included project: :libraries:ui-strings
+Included project: :libraries:ui-utils
+Included project: :libraries:usersearch:api
+Included project: :libraries:usersearch:impl
+Included project: :libraries:usersearch:test
+Included project: :libraries:voiceplayer:api
+Included project: :libraries:voiceplayer:impl
+Included project: :libraries:voicerecorder:api
+Included project: :libraries:voicerecorder:impl
+Included project: :libraries:voicerecorder:test
+Included project: :libraries:wellknown:api
+Included project: :libraries:wellknown:impl
+Included project: :libraries:wellknown:test
+Included project: :libraries:workmanager:api
+Included project: :libraries:workmanager:impl
+Included project: :libraries:workmanager:test
+Included project: :services:analytics:api
+Included project: :services:analytics:compose
+Included project: :services:analytics:impl
+Included project: :services:analytics:noop
+Included project: :services:analytics:test
+Included project: :services:analyticsproviders:api
+Included project: :services:analyticsproviders:posthog
+Included project: :services:analyticsproviders:sentry
+Included project: :services:analyticsproviders:test
+Included project: :services:apperror:api
+Included project: :services:apperror:impl
+Included project: :services:apperror:test
+Included project: :services:appnavstate:api
+Included project: :services:appnavstate:impl
+Included project: :services:appnavstate:test
+Included project: :services:toolbox:api
+Included project: :services:toolbox:impl
+Included project: :services:toolbox:test
+Type-safe project accessors is an incubating feature.
+> Task :plugins:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :plugins:compilePluginsBlocks UP-TO-DATE
+> Task :plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :plugins:compileKotlin UP-TO-DATE
+> Task :plugins:compileJava NO-SOURCE
+> Task :plugins:pluginDescriptors UP-TO-DATE
+> Task :plugins:processResources UP-TO-DATE
+> Task :plugins:classes UP-TO-DATE
+> Task :plugins:jar UP-TO-DATE
+
+> Configure project :features:login:impl
+WARNING: The option setting 'android.enableBuildConfigAsBytecode=true' is experimental.
+The current default is 'false'.
+WARNING: The option setting 'android.experimental.enableTestFixtures=true' is experimental.
+The current default is 'false'.
+WARNING: The option setting 'android.r8.gradual.support=true' is experimental.
+The current default is 'false'.
+
+> Task :libraries:matrix:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :appconfig:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :services:analytics:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:matrix:api:preBuild UP-TO-DATE
+> Task :services:analytics:api:preBuild UP-TO-DATE
+> Task :libraries:androidutils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:architecture:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:matrix:api:preReleaseBuild UP-TO-DATE
+> Task :annotations:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:androidutils:preBuild UP-TO-DATE
+> Task :libraries:core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :appconfig:preBuild UP-TO-DATE
+> Task :libraries:di:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :codegen:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:session-storage:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :services:analyticsproviders:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :services:toolbox:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:architecture:preBuild UP-TO-DATE
+> Task :appconfig:preReleaseBuild UP-TO-DATE
+> Task :libraries:architecture:preReleaseBuild UP-TO-DATE
+> Task :services:toolbox:api:preBuild UP-TO-DATE
+> Task :services:toolbox:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:session-storage:api:preBuild UP-TO-DATE
+> Task :services:analytics:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:architecture:generateReleaseResValues UP-TO-DATE
+> Task :libraries:matrix:api:generateReleaseBuildConfig UP-TO-DATE
+> Task :libraries:androidutils:preReleaseBuild UP-TO-DATE
+> Task :codegen:processResources UP-TO-DATE
+> Task :services:analyticsproviders:api:preBuild UP-TO-DATE
+> Task :appconfig:generateReleaseBuildConfig UP-TO-DATE
+> Task :libraries:androidutils:generateReleaseBuildConfig UP-TO-DATE
+> Task :libraries:session-storage:api:preReleaseBuild UP-TO-DATE
+> Task :services:toolbox:api:generateReleaseResValues UP-TO-DATE
+> Task :services:analyticsproviders:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:matrix:api:generateReleaseResValues UP-TO-DATE
+> Task :services:analytics:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:architecture:generateReleaseResources UP-TO-DATE
+> Task :libraries:session-storage:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:compound:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:session-storage:api:generateReleaseResources UP-TO-DATE
+> Task :services:analytics:api:generateReleaseResources UP-TO-DATE
+> Task :appconfig:generateReleaseResValues UP-TO-DATE
+> Task :services:toolbox:api:generateReleaseResources UP-TO-DATE
+> Task :appconfig:generateReleaseResources UP-TO-DATE
+> Task :libraries:session-storage:api:packageReleaseResources UP-TO-DATE
+> Task :services:analytics:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:architecture:packageReleaseResources UP-TO-DATE
+> Task :libraries:androidutils:generateReleaseResValues UP-TO-DATE
+> Task :libraries:session-storage:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:compound:preBuild UP-TO-DATE
+> Task :libraries:compound:preReleaseBuild UP-TO-DATE
+> Task :services:analyticsproviders:api:generateReleaseResValues UP-TO-DATE
+> Task :services:toolbox:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:architecture:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:matrix:api:generateReleaseResources UP-TO-DATE
+> Task :services:analytics:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:compound:generateReleaseResValues UP-TO-DATE
+> Task :appconfig:packageReleaseResources UP-TO-DATE
+> Task :services:analyticsproviders:api:generateReleaseResources UP-TO-DATE
+> Task :libraries:androidutils:generateReleaseResources UP-TO-DATE
+> Task :libraries:compound:generateReleaseResources UP-TO-DATE
+> Task :appconfig:processReleaseNavigationResources UP-TO-DATE
+> Task :services:toolbox:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:matrix:api:packageReleaseResources UP-TO-DATE
+> Task :services:analyticsproviders:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:matrix:api:processReleaseNavigationResources UP-TO-DATE
+> Task :services:analyticsproviders:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:androidutils:packageReleaseResources UP-TO-DATE
+> Task :libraries:androidutils:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:compound:packageReleaseResources UP-TO-DATE
+> Task :libraries:compound:processReleaseNavigationResources UP-TO-DATE
+> Task :appconfig:parseReleaseLocalResources UP-TO-DATE
+> Task :appconfig:generateReleaseRFile UP-TO-DATE
+> Task :libraries:androidutils:parseReleaseLocalResources UP-TO-DATE
+> Task :appconfig:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:designsystem:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:designsystem:preBuild UP-TO-DATE
+> Task :libraries:designsystem:preReleaseBuild UP-TO-DATE
+> Task :services:analyticsproviders:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:designsystem:generateReleaseBuildConfig UP-TO-DATE
+> Task :libraries:androidutils:generateReleaseRFile UP-TO-DATE
+> Task :libraries:designsystem:generateReleaseResValues UP-TO-DATE
+> Task :libraries:androidutils:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:designsystem:generateReleaseResources UP-TO-DATE
+> Task :libraries:testtags:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:testtags:preBuild UP-TO-DATE
+> Task :services:analyticsproviders:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:testtags:preReleaseBuild UP-TO-DATE
+> Task :services:toolbox:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:matrix:api:parseReleaseLocalResources UP-TO-DATE
+> Task :services:analytics:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:testtags:generateReleaseResValues UP-TO-DATE
+> Task :libraries:designsystem:packageReleaseResources UP-TO-DATE
+> Task :libraries:testtags:generateReleaseResources UP-TO-DATE
+> Task :services:analytics:api:generateReleaseRFile UP-TO-DATE
+> Task :services:toolbox:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:matrix:api:generateReleaseRFile UP-TO-DATE
+> Task :services:analytics:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:designsystem:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:ui-strings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:testtags:packageReleaseResources UP-TO-DATE
+> Task :libraries:architecture:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:matrix:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:ui-strings:preBuild UP-TO-DATE
+> Task :libraries:testtags:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:ui-strings:preReleaseBuild UP-TO-DATE
+> Task :libraries:preferences:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:preferences:api:preBuild UP-TO-DATE
+> Task :libraries:ui-strings:generateReleaseResValues UP-TO-DATE
+> Task :libraries:preferences:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:architecture:generateReleaseRFile UP-TO-DATE
+> Task :libraries:ui-strings:generateReleaseResources UP-TO-DATE
+> Task :libraries:qrcode:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:qrcode:preBuild UP-TO-DATE
+> Task :libraries:qrcode:preReleaseBuild UP-TO-DATE
+> Task :libraries:preferences:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:qrcode:generateReleaseResValues UP-TO-DATE
+> Task :libraries:preferences:api:generateReleaseResources UP-TO-DATE
+> Task :libraries:ui-strings:packageReleaseResources UP-TO-DATE
+> Task :libraries:qrcode:generateReleaseResources UP-TO-DATE
+> Task :libraries:ui-strings:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:session-storage:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:qrcode:packageReleaseResources UP-TO-DATE
+> Task :libraries:preferences:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:testtags:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:preferences:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:qrcode:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:testtags:generateReleaseRFile UP-TO-DATE
+> Task :libraries:session-storage:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:preferences:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:ui-strings:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:qrcode:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:qrcode:generateReleaseRFile UP-TO-DATE
+> Task :libraries:ui-strings:generateReleaseRFile UP-TO-DATE
+> Task :libraries:qrcode:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:compound:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:ui-utils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:ui-utils:preBuild UP-TO-DATE
+> Task :libraries:ui-utils:preReleaseBuild UP-TO-DATE
+> Task :libraries:ui-utils:generateReleaseResValues UP-TO-DATE
+> Task :libraries:ui-utils:generateReleaseResources UP-TO-DATE
+> Task :libraries:compound:generateReleaseRFile UP-TO-DATE
+> Task :libraries:ui-utils:packageReleaseResources UP-TO-DATE
+> Task :annotations:compileKotlin UP-TO-DATE
+> Task :libraries:ui-utils:processReleaseNavigationResources UP-TO-DATE
+> Task :annotations:compileJava NO-SOURCE
+> Task :annotations:processResources NO-SOURCE
+> Task :annotations:classes UP-TO-DATE
+> Task :libraries:ui-utils:parseReleaseLocalResources UP-TO-DATE
+> Task :annotations:jar UP-TO-DATE
+> Task :libraries:ui-utils:generateReleaseRFile UP-TO-DATE
+> Task :services:toolbox:impl:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :services:toolbox:impl:preBuild UP-TO-DATE
+> Task :services:toolbox:impl:preReleaseBuild UP-TO-DATE
+> Task :libraries:designsystem:parseReleaseLocalResources UP-TO-DATE
+> Task :services:toolbox:impl:generateReleaseResValues UP-TO-DATE
+> Task :services:toolbox:impl:generateReleaseResources UP-TO-DATE
+> Task :services:toolbox:impl:packageReleaseResources UP-TO-DATE
+> Task :services:toolbox:impl:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:preferences:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:preferences:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:ui-utils:javaPreCompileRelease UP-TO-DATE
+> Task :features:enterprise:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:enterprise:api:preBuild UP-TO-DATE
+> Task :features:enterprise:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:core:compileKotlin UP-TO-DATE
+> Task :libraries:designsystem:generateReleaseRFile UP-TO-DATE
+> Task :features:enterprise:api:generateReleaseResValues UP-TO-DATE
+> Task :features:enterprise:api:generateReleaseResources UP-TO-DATE
+> Task :services:toolbox:impl:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:core:compileJava NO-SOURCE
+> Task :libraries:di:compileKotlin UP-TO-DATE
+> Task :libraries:core:processResources NO-SOURCE
+> Task :libraries:core:classes UP-TO-DATE
+> Task :libraries:di:compileJava NO-SOURCE
+> Task :libraries:di:processResources NO-SOURCE
+> Task :libraries:di:classes UP-TO-DATE
+> Task :services:toolbox:impl:generateReleaseRFile UP-TO-DATE
+> Task :services:toolbox:impl:javaPreCompileRelease UP-TO-DATE
+> Task :features:login:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:login:api:preBuild UP-TO-DATE
+> Task :features:login:api:preReleaseBuild UP-TO-DATE
+> Task :features:enterprise:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:core:jar UP-TO-DATE
+> Task :features:login:api:generateReleaseResValues UP-TO-DATE
+> Task :features:enterprise:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:di:jar UP-TO-DATE
+> Task :features:enterprise:api:parseReleaseLocalResources UP-TO-DATE
+> Task :features:login:impl:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:login:api:generateReleaseResources UP-TO-DATE
+> Task :features:login:impl:preBuild UP-TO-DATE
+> Task :features:login:impl:preReleaseBuild UP-TO-DATE
+> Task :features:login:impl:generateReleaseResValues UP-TO-DATE
+> Task :features:enterprise:api:generateReleaseRFile UP-TO-DATE
+> Task :features:login:impl:generateReleaseResources UP-TO-DATE
+> Task :features:login:api:packageReleaseResources UP-TO-DATE
+> Task :features:enterprise:api:javaPreCompileRelease UP-TO-DATE
+> Task :features:rageshake:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:rageshake:api:preBuild UP-TO-DATE
+> Task :features:rageshake:api:preReleaseBuild UP-TO-DATE
+> Task :features:login:impl:packageReleaseResources UP-TO-DATE
+> Task :features:rageshake:api:generateReleaseResValues UP-TO-DATE
+> Task :features:login:impl:processReleaseNavigationResources UP-TO-DATE
+> Task :features:rageshake:api:generateReleaseResources UP-TO-DATE
+> Task :features:login:api:processReleaseNavigationResources UP-TO-DATE
+> Task :features:login:impl:parseReleaseLocalResources UP-TO-DATE
+> Task :features:login:api:parseReleaseLocalResources UP-TO-DATE
+> Task :features:login:impl:generateReleaseRFile UP-TO-DATE
+> Task :libraries:featureflag:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:featureflag:api:preBuild UP-TO-DATE
+> Task :libraries:featureflag:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:featureflag:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:featureflag:api:generateReleaseResources UP-TO-DATE
+> Task :libraries:featureflag:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:featureflag:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:oidc:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:oidc:api:preBuild UP-TO-DATE
+> Task :libraries:oidc:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:featureflag:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:featureflag:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:oidc:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:oidc:api:generateReleaseResources UP-TO-DATE
+> Task :libraries:featureflag:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:permissions:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:permissions:api:preBuild UP-TO-DATE
+> Task :libraries:oidc:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:permissions:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:permissions:api:generateReleaseResValues UP-TO-DATE
+> Task :libraries:oidc:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:permissions:api:generateReleaseResources UP-TO-DATE
+> Task :libraries:oidc:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:permissions:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:permissions:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:oidc:api:generateReleaseRFile UP-TO-DATE
+> Task :features:login:api:generateReleaseRFile UP-TO-DATE
+> Task :features:rageshake:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:oidc:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:permissions:api:parseReleaseLocalResources UP-TO-DATE
+> Task :features:login:api:javaPreCompileRelease UP-TO-DATE
+> Task :features:rageshake:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:wellknown:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :libraries:wellknown:api:preBuild UP-TO-DATE
+> Task :libraries:wellknown:api:preReleaseBuild UP-TO-DATE
+> Task :libraries:permissions:api:generateReleaseRFile UP-TO-DATE
+> Task :features:rageshake:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:permissions:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:wellknown:api:generateReleaseResValues UP-TO-DATE
+> Task :features:rageshake:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:wellknown:api:generateReleaseResources UP-TO-DATE
+> Task :features:rageshake:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:wellknown:api:packageReleaseResources UP-TO-DATE
+> Task :libraries:wellknown:api:processReleaseNavigationResources UP-TO-DATE
+> Task :libraries:wellknown:api:parseReleaseLocalResources UP-TO-DATE
+> Task :libraries:wellknown:api:generateReleaseRFile UP-TO-DATE
+> Task :libraries:ui-strings:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:ui-strings:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:ui-strings:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:ui-strings:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :services:analyticsproviders:api:compileReleaseKotlin UP-TO-DATE
+> Task :services:analyticsproviders:api:javaPreCompileRelease UP-TO-DATE
+> Task :services:analyticsproviders:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :services:analyticsproviders:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:wellknown:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:wellknown:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:wellknown:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:wellknown:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :codegen:compileKotlin UP-TO-DATE
+> Task :codegen:compileJava NO-SOURCE
+> Task :codegen:classes UP-TO-DATE
+> Task :codegen:jar UP-TO-DATE
+> Task :services:toolbox:api:compileReleaseKotlin UP-TO-DATE
+> Task :services:toolbox:api:javaPreCompileRelease UP-TO-DATE
+> Task :services:toolbox:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :services:toolbox:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:designsystem:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:session-storage:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:testtags:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:session-storage:api:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:testtags:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:session-storage:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:testtags:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:session-storage:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:testtags:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:compound:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:androidutils:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:compound:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:androidutils:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:compound:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:androidutils:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:compound:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :services:analytics:api:compileReleaseKotlin UP-TO-DATE
+> Task :services:analytics:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :services:analytics:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :services:toolbox:impl:compileReleaseKotlin UP-TO-DATE
+> Task :services:toolbox:impl:compileReleaseJavaWithJavac NO-SOURCE
+> Task :services:toolbox:impl:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:architecture:kspReleaseKotlin FROM-CACHE
+> Task :libraries:architecture:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:architecture:javaPreCompileRelease UP-TO-DATE
+> Task :libraries:ui-utils:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:architecture:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:architecture:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:ui-utils:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:ui-utils:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :features:login:api:compileReleaseKotlin UP-TO-DATE
+> Task :features:login:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :features:login:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:oidc:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:oidc:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:oidc:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:matrix:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:matrix:api:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :libraries:matrix:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :appconfig:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:preferences:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:preferences:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:preferences:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :appconfig:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :appconfig:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :features:enterprise:api:compileReleaseKotlin UP-TO-DATE
+> Task :features:enterprise:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :features:enterprise:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:featureflag:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:featureflag:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:featureflag:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:designsystem:kspReleaseKotlin FROM-CACHE
+> Task :libraries:designsystem:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:designsystem:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:designsystem:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :features:rageshake:api:compileReleaseKotlin UP-TO-DATE
+> Task :features:rageshake:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :features:rageshake:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:permissions:api:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:permissions:api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:permissions:api:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :libraries:qrcode:compileReleaseKotlin UP-TO-DATE
+> Task :libraries:qrcode:compileReleaseJavaWithJavac NO-SOURCE
+> Task :libraries:qrcode:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :features:login:impl:kspReleaseKotlin FROM-CACHE
+
+> Task :features:login:impl:compileReleaseKotlin
+./gradlew : e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/
+element/android/features/login/impl/resolver/ConvergenceDiscoveryService.kt:5:37 Unresolved reference 'network'.
+Au caractère Ligne:1 : 1
++ ./gradlew :features:login:impl:compileReleaseKotlin > build_log.txt 2 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (e: file:///C:/U...ence 'network'.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:10:34 Unresolved reference 'RetrofitFactory'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:12:21 Property delegate must have a 
+'getValue(ConvergenceDiscoveryService, KProperty1<ConvergenceDiscoveryService, ERROR CLASS: Cannot infer argument for 
+type parameter T>)' method. None of the following functions is applicable:
+fun <T> Lazy<T>.getValue(thisRef: Any?, property: KProperty<*>): T
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:12:24 Cannot infer type for type parameter 'T'. 
+Specify it explicitly.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:12:24 Cannot infer type for type parameter 'T'. 
+Specify it explicitly.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:13:25 Unresolved reference 'create'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:17:17 Unresolved reference 'getDomains'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:25:32 Unresolved reference 'resolveHomeServer'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:26:37 Cannot infer type for type parameter 'T'. 
+Specify it explicitly.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:26:37 Cannot infer type for type parameter 'R'. 
+Specify it explicitly.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:26:43 Cannot infer type for type parameter 'T'. 
+Specify it explicitly.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/ConvergenceDiscoveryService.kt:34:13 Null cannot be a value of a non-null type 
+'uninferred K (of fun <K> TRY_CALL)'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:5:8 Unresolved reference 'retrofit2'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:6:8 Unresolved reference 'retrofit2'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:9:6 Unresolved reference 'GET'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:12:6 Unresolved reference 'GET'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:14:10 Unresolved reference 'Query'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/DiscoveryApi.kt:15:10 Unresolved reference 'Query'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/HomeserverResolver.kt:44:52 Unresolved reference 'resolveHomeServer'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/HomeserverResolver.kt:47:41 Argument type mismatch: actual type is 'Any', but 
+'String' was expected.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/HomeserverResolver.kt:57:53 Unresolved reference 'resolveHomeServer'.
+e: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/features/login/impl/src/main/kotlin/io/element/andr
+oid/features/login/impl/resolver/HomeserverResolver.kt:60:33 Argument type mismatch: actual type is 'Any', but 
+'String' was expected.
+
+> Task :features:login:impl:compileReleaseKotlin FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/A122759/technologies_d3x/kimia/mimosa-x-android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':features:login:impl:compileReleaseKotlin'.
+> A failure occurred while executing 
+org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 15s
+241 actionable tasks: 1 executed, 3 from cache, 237 up-to-date

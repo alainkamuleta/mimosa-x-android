@@ -17,9 +17,9 @@ object BuildTimeConfig {
 
     val METADATA_HOST_REVERSED: String? = "net.ztn0.mimosa"
     val URL_WEBSITE: String? = "https://ztn0.net"
-    val URL_LOGO: String? = null
-    val URL_COPYRIGHT: String? = null
-    val URL_ACCEPTABLE_USE: String? = null
+    val URL_LOGO: String? = "https://ztn0.net/logo.png"
+    val URL_COPYRIGHT: String? = "https://ztn0.net/copyright"
+    val URL_ACCEPTABLE_USE: String? = "https://ztn0.net/cgu"
     val URL_PRIVACY: String? = "https://ztn0.net/privacy"
     val URL_POLICY: String? = "https://ztn0.net/terms"
     val SERVICES_MAPTILER_BASE_URL: String? = null
