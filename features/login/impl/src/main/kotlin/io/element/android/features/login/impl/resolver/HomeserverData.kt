@@ -11,4 +11,7 @@ package io.element.android.features.login.impl.resolver
 data class HomeserverData(
     // The computed homeserver url, for which a wellknown file has been retrieved, or just a valid Url
     val homeserverUrl: String,
+    val homeserverDomain: String? = null,
+    val isSovereign: Boolean = false,
+    val icon: String? = null,
 )
