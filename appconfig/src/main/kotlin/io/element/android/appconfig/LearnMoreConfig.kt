@@ -9,8 +9,9 @@
 package io.element.android.appconfig
 
 object LearnMoreConfig {
-    const val ENCRYPTION_URL: String = "https://element.io/help#encryption"
-    const val DEVICE_VERIFICATION_URL: String = "https://element.io/help#encryption-device-verification"
-    const val SECURE_BACKUP_URL: String = "https://element.io/help#encryption5"
-    const val IDENTITY_CHANGE_URL: String = "https://element.io/help#encryption18"
+    const val ENCRYPTION_URL: String = "https://aide.ztn0.net/chiffrement"
+    const val DEVICE_VERIFICATION_URL: String = "https://aide.ztn0.net/chiffrement#verification-appareil"
+    const val SECURE_BACKUP_URL: String = "https://aide.ztn0.net/chiffrement#sauvegarde"
+    const val IDENTITY_CHANGE_URL: String = "https://aide.ztn0.net/chiffrement#changement-identite"
 }
+

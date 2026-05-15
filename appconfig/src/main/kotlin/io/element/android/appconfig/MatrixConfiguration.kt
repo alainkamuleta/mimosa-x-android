@@ -9,6 +9,7 @@
 package io.element.android.appconfig
 
 object MatrixConfiguration {
-    const val MATRIX_TO_PERMALINK_BASE_URL: String = "https://matrix.to/#/"
+    const val MATRIX_TO_PERMALINK_BASE_URL: String = "https://link.ztn0.net/#/"
     val clientPermalinkBaseUrl: String? = null
 }
+

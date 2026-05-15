@@ -134,7 +134,7 @@ private fun ChooseSelfVerificationModeButtons(
                         onClick = onUseRecoveryKey,
                     )
                 }
-                OutlinedButton(
+                Button(
                     modifier = Modifier.fillMaxWidth(),
                     text = stringResource(R.string.screen_identity_confirmation_cannot_confirm),
                     onClick = onResetKey,
