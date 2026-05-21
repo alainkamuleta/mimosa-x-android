@@ -120,9 +120,8 @@ android {
             resValue(
                 "string",
                 "login_redirect_scheme",
-                "$oidcRedirectSchemeBase.debug",
+                oidcRedirectSchemeBase,
             )
-            applicationIdSuffix = ".debug"
             signingConfig = signingConfigs.getByName("debug")
         }
 

@@ -52,6 +52,9 @@ fun ConfirmAccountProviderView(
     }
     val eventSink = state.eventSink
 
+    val providerTitle = state.accountProvider.title
+    val displayTitle = if (providerTitle == "ztn0.net") "Mimosa" else providerTitle
+
     HeaderFooterPage(
         modifier = modifier,
         header = {
@@ -64,7 +67,7 @@ fun ConfirmAccountProviderView(
                     } else {
                         R.string.screen_account_provider_signin_title
                     },
-                    state.accountProvider.title
+                    displayTitle
                 ),
                 subTitle = stringResource(
                     id = if (state.isAccountCreation) {
@@ -85,14 +88,6 @@ fun ConfirmAccountProviderView(
                     modifier = Modifier
                         .fillMaxWidth()
                         .testTag(TestTags.loginContinue)
-                )
-                TextButton(
-                    text = stringResource(id = R.string.screen_account_provider_change),
-                    onClick = onChange,
-                    enabled = !isLoading,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag(TestTags.loginChangeServer)
                 )
             }
         }

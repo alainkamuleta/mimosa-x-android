@@ -33,6 +33,7 @@ class SovereignEnrollmentPresenter @AssistedInject constructor(
         var step by remember { mutableStateOf<EnrollmentStep>(EnrollmentStep.MethodSelection) }
         var enrollmentData by remember { mutableStateOf<io.element.android.libraries.matrix.api.auth.SovereignEnrollmentData?>(null) }
         var errorMessage by remember { mutableStateOf<String?>(null) }
+        var pollingJob by remember { mutableStateOf<Job?>(null) }
 
         fun handleEvent(event: SovereignEnrollmentEvents) {
             when (event) {

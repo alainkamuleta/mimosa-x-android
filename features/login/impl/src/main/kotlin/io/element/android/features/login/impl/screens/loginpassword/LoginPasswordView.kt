@@ -172,6 +172,17 @@ fun LoginPasswordView(
                             .fillMaxWidth()
                             .testTag(TestTags.loginContinue)
                     )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    val context = androidx.compose.ui.platform.LocalContext.current
+                    Button(
+                        text = "🛡️ Déverrouiller avec Fongola",
+                        onClick = {
+                            val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("fongola://auth?app=mimosa"))
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    )
                     Spacer(modifier = Modifier.height(48.dp))
                 }
             }

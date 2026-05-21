@@ -5,7 +5,7 @@ import io.element.android.libraries.matrix.api.auth.SovereignEnrollmentData
 import io.element.android.libraries.network.RetrofitFactory
 import kotlinx.coroutines.delay
 import timber.log.Timber
-import javax.inject.Inject
+import dev.zacsweers.metro.Inject
 
 class SovereignEnrollmentService @Inject constructor(
     private val retrofitFactory: RetrofitFactory,

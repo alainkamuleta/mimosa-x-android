@@ -1,5 +1,9 @@
 package io.element.android.features.login.impl.screens.sovereignenrollment
 
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,20 +20,29 @@ import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import io.element.android.compound.theme.ElementTheme
 import io.element.android.libraries.designsystem.atomic.pages.HeaderFooterPage
 import io.element.android.libraries.designsystem.components.button.BackButton
 import io.element.android.libraries.designsystem.theme.components.Button
 import io.element.android.libraries.designsystem.theme.components.Icon
+import io.element.android.libraries.designsystem.theme.components.IconSource
 import io.element.android.libraries.designsystem.theme.components.Text
 import io.element.android.libraries.designsystem.theme.components.TextButton
 import io.element.android.libraries.designsystem.theme.components.TopAppBar
@@ -71,15 +84,46 @@ fun SovereignEnrollmentView(
                     SovereignMethodSelection(onMethodSelected = { state.eventSink(SovereignEnrollmentEvents.OnSelectMethod(it)) })
                 }
                 EnrollmentStep.Scanning -> {
-                    QrCodeCameraView(
-                        onScanQrCode = { bytes ->
-                            state.eventSink(SovereignEnrollmentEvents.OnQrCodeScanned(String(bytes)))
-                        },
-                        renderPreview = true,
-                        modifier = Modifier
-                            .size(280.dp)
-                            .padding(16.dp)
+                    val context = LocalContext.current
+                    var hasCameraPermission by remember {
+                        mutableStateOf(
+                            ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
+                        )
+                    }
+                    val launcher = rememberLauncherForActivityResult(
+                        contract = ActivityResultContracts.RequestPermission(),
+                        onResult = { granted -> hasCameraPermission = granted }
                     )
+                    LaunchedEffect(Unit) {
+                        if (!hasCameraPermission) {
+                            launcher.launch(Manifest.permission.CAMERA)
+                        }
+                    }
+
+                    if (hasCameraPermission) {
+                        QrCodeCameraView(
+                            onScanQrCode = { bytes ->
+                                state.eventSink(SovereignEnrollmentEvents.OnQrCodeScanned(String(bytes)))
+                            },
+                            renderPreview = true,
+                            modifier = Modifier
+                                .size(280.dp)
+                                .padding(16.dp)
+                        )
+                    } else {
+                        Box(
+                            modifier = Modifier
+                                .size(280.dp)
+                                .padding(16.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Permission Caméra Requise",
+                                style = ElementTheme.typography.fontBodyMdMedium,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    }
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(
                         text = "Scannez votre QR Code Convergence",
@@ -102,7 +146,7 @@ fun SovereignEnrollmentView(
                     SovereignSecuringContent()
                 }
                 EnrollmentStep.Loading -> {
-                    // Show a progress indicator
+                    SovereignLoadingContent()
                 }
             }
             state.errorMessage?.let { error ->
@@ -125,7 +169,7 @@ private fun SovereignEnrollmentHeader(state: SovereignEnrollmentState) {
         EnrollmentStep.IdInput -> "Identifiant Manuel"
         EnrollmentStep.Confirming -> "Confirmation d'Organisation"
         EnrollmentStep.Securing -> "Sécurisation Biométrique"
-        EnrollmentStep.Loading -> "Initialisation..."
+        EnrollmentStep.Loading -> "Attente de Validation"
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
         Spacer(modifier = Modifier.height(24.dp))
@@ -134,6 +178,7 @@ private fun SovereignEnrollmentHeader(state: SovereignEnrollmentState) {
                 EnrollmentStep.Confirming -> Icons.Default.VerifiedUser
                 EnrollmentStep.EmailInput -> Icons.Default.Email
                 EnrollmentStep.IdInput -> Icons.Default.Badge
+                EnrollmentStep.Loading -> Icons.Default.VerifiedUser
                 else -> Icons.Default.QrCodeScanner
             },
             contentDescription = null,
@@ -225,21 +270,21 @@ private fun SovereignMethodSelection(onMethodSelected: (EnrollmentMethod) -> Uni
         Spacer(modifier = Modifier.height(24.dp))
         Button(
             text = "Scanner mon QR Code",
-            leadingIcon = { Icon(Icons.Default.QrCodeScanner, contentDescription = null) },
+            leadingIcon = IconSource.Vector(Icons.Default.QrCodeScanner),
             onClick = { onMethodSelected(EnrollmentMethod.QR_CODE) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(12.dp))
         Button(
-            text = "Utiliser mon Email Convergence",
-            leadingIcon = { Icon(Icons.Default.Email, contentDescription = null) },
+            text = "Entrer email Convergence",
+            leadingIcon = IconSource.Vector(Icons.Default.Email),
             onClick = { onMethodSelected(EnrollmentMethod.EMAIL) },
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(12.dp))
         Button(
             text = "Saisir mon Identifiant",
-            leadingIcon = { Icon(Icons.Default.Badge, contentDescription = null) },
+            leadingIcon = IconSource.Vector(Icons.Default.Badge),
             onClick = { onMethodSelected(EnrollmentMethod.ID) },
             modifier = Modifier.fillMaxWidth()
         )
@@ -256,7 +301,17 @@ private fun SovereignEmailInput(onEmailSubmit: (String) -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Entrez votre adresse email Convergence (@ztn0.net) pour recevoir votre code d'enrôlement à 8 chiffres.",
+            text = buildAnnotatedString {
+                append("Entrez votre adresse email Convergence (")
+                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = Color(0xFF0000FF))) {
+                    append("@ztn0.net")
+                }
+                append(") pour lancer l'enrôlement.\n\nVous pourrez approuver instantanément via ")
+                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = Color(0xFF008000))) {
+                    append("Fongola (authentification forte biométrique)")
+                }
+                append(" ou via le lien reçu par e-mail.")
+            },
             style = ElementTheme.typography.fontBodyMdRegular,
             textAlign = TextAlign.Center
         )
@@ -274,6 +329,37 @@ private fun SovereignEmailInput(onEmailSubmit: (String) -> Unit) {
             onClick = { onEmailSubmit(email) },
             enabled = email.isNotEmpty() && email.contains("@"),
             modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+@Composable
+private fun SovereignLoadingContent() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(modifier = Modifier.height(24.dp))
+        androidx.compose.material3.CircularProgressIndicator(
+            color = ElementTheme.colors.textSuccessPrimary,
+            modifier = Modifier.size(48.dp)
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        Text(
+            text = "📡 Radar Zero-Trust Actif",
+            style = ElementTheme.typography.fontHeadingMdBold,
+            color = ElementTheme.colors.textSuccessPrimary,
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = "Une demande de connexion sécurisée a été envoyée.\n\n" +
+                   "Ouvrez l'application mobile Fongola pour approuver cet enrôlement avec votre empreinte digitale (ou validez le lien reçu par e-mail).",
+            style = ElementTheme.typography.fontBodyMdRegular,
+            textAlign = TextAlign.Center,
+            color = ElementTheme.colors.textPrimary
         )
     }
 }

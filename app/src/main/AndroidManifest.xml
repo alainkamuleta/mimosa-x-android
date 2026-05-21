@@ -81,6 +81,14 @@
                     android:host="open"
                     android:scheme="elementx" />
             </intent-filter>
+            
+            <!-- Convergence Fongola Passwordless SSO Callback -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="mimosa" android:host="auth-callback" />
+            </intent-filter>
             <!--
               Oidc redirection
             -->
