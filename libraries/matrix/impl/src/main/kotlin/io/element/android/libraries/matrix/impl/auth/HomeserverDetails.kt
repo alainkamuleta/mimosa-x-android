@@ -15,6 +15,6 @@ fun HomeserverLoginDetails.map(): MatrixHomeServerDetails = use {
     MatrixHomeServerDetails(
         url = url(),
         supportsPasswordLogin = supportsPasswordLogin(),
-        supportsOidcLogin = true, // Force true to support Convergence SSO/OIDC
+        supportsOidcLogin = supportsOidcLogin(),
     )
 }
