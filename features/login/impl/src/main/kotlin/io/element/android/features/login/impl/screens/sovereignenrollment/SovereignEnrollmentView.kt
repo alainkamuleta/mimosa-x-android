@@ -4,14 +4,20 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.Email
@@ -379,17 +385,69 @@ private fun SovereignIdInput(onIdSubmit: (String) -> Unit) {
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(24.dp))
-        OutlinedTextField(
-            value = id,
-            onValueChange = { id = it },
-            label = { Text("Identifiant Mimosa") },
-            modifier = Modifier.fillMaxWidth(),
-            singleLine = true
-        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+                .border(1.dp, Color(0xFFCBD5E1), RoundedCornerShape(8.dp))
+                .clip(RoundedCornerShape(8.dp)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // @ Prefix (Fige)
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .background(Color(0xFFE0F2FE)) // Light blue sky color
+                    .padding(horizontal = 16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "@",
+                    color = Color(0xFF0369A1), // Dark blue sky color
+                    style = ElementTheme.typography.fontBodyLgMedium.copy(fontWeight = FontWeight.Bold)
+                )
+            }
+            
+            // Editable Input Box (john.doe)
+            androidx.compose.foundation.text.BasicTextField(
+                value = id,
+                onValueChange = { id = it },
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 16.dp),
+                textStyle = ElementTheme.typography.fontBodyLgRegular.copy(color = ElementTheme.colors.textPrimary),
+                singleLine = true,
+                decorationBox = { innerTextField ->
+                    if (id.isEmpty()) {
+                        Text(
+                            text = "john.doe",
+                            color = ElementTheme.colors.textSecondary,
+                            style = ElementTheme.typography.fontBodyLgRegular
+                        )
+                    }
+                    innerTextField()
+                }
+            )
+            
+            // Suffix Domain (ztn0.net) (Fige)
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .background(Color(0xFFE0F2FE)) // Light blue sky color
+                    .padding(horizontal = 16.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "ztn0.net",
+                    color = Color(0xFF0369A1), // Dark blue sky color
+                    style = ElementTheme.typography.fontBodyLgMedium.copy(fontWeight = FontWeight.Bold)
+                )
+            }
+        }
         Spacer(modifier = Modifier.height(24.dp))
         Button(
             text = "Continuer",
-            onClick = { onIdSubmit(id) },
+            onClick = { onIdSubmit("@$id:ztn0.net") },
             enabled = id.isNotEmpty(),
             modifier = Modifier.fillMaxWidth()
         )

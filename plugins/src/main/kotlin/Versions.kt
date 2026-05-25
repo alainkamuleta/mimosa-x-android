@@ -45,7 +45,7 @@ private const val versionMonth = 5
  * Release number in the month. Value must be in [0,99].
  * Do not update this value. it is updated by the release script.
  */
-private const val versionReleaseNumber = 4
+private const val versionReleaseNumber = 5
 
 object Versions {
     /**
@@ -54,8 +54,8 @@ object Versions {
      * AAB will have a ABI code of 0.
      * See comment above for the calculation method.
      */
-    const val VERSION_CODE = 20260505
-    val VERSION_NAME = "26.05.5"
+    const val VERSION_CODE = 20260506
+    val VERSION_NAME = "26.05.6"
 
     /**
      * Compile SDK version. Must be updated when a new Android version is released.
