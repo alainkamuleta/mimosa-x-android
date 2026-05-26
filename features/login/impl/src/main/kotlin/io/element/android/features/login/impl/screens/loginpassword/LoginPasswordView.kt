@@ -175,15 +175,29 @@ fun LoginPasswordView(
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     val context = androidx.compose.ui.platform.LocalContext.current
+                    var showFongolaError by remember { mutableStateOf(false) }
+                    
                     Button(
                         text = "🛡️ Déverrouiller avec Fongola",
                         onClick = {
-                            val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("fongola://auth?app=mimosa"))
-                            context.startActivity(intent)
+                            try {
+                                val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("fongola://auth?app=mimosa"))
+                                context.startActivity(intent)
+                            } catch (e: android.content.ActivityNotFoundException) {
+                                showFongolaError = true
+                            }
                         },
                         modifier = Modifier.fillMaxWidth()
                     )
                     Spacer(modifier = Modifier.height(48.dp))
+                    
+                    if (showFongolaError) {
+                        io.element.android.libraries.designsystem.components.dialogs.ErrorDialog(
+                            title = "Application non installée",
+                            content = "L'application mobile Fongola n'est pas installée sur cet appareil ou n'a pas pu être lancée.",
+                            onSubmit = { showFongolaError = false }
+                        )
+                    }
                 }
             }
 

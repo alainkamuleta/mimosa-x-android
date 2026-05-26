@@ -55,6 +55,15 @@ class ConfirmAccountProviderPresenter(
             }
         }
 
+        // Flux direct pur SSO : on auto-soumet la demande
+        androidx.compose.runtime.LaunchedEffect(Unit) {
+            loginHelper.submit(
+                isAccountCreation = params.isAccountCreation,
+                homeserverUrl = accountProvider.url,
+                loginHint = null,
+            )
+        }
+
         return ConfirmAccountProviderState(
             accountProvider = accountProvider,
             isAccountCreation = params.isAccountCreation,
