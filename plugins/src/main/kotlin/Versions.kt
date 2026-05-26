@@ -54,8 +54,8 @@ object Versions {
      * AAB will have a ABI code of 0.
      * See comment above for the calculation method.
      */
-    const val VERSION_CODE = 20260506
-    val VERSION_NAME = "26.05.6"
+    const val VERSION_CODE = 20260509
+    val VERSION_NAME = "26.05.9"
 
     /**
      * Compile SDK version. Must be updated when a new Android version is released.
